@@ -1,0 +1,20 @@
+docker --version
+# Checks if Docker is installed
+docker login
+# Logs into Docker Hub using username and password
+docker images
+# Lists all local Docker images
+docker build -t my-docker-app .
+# Builds Docker image from Dockerfile
+docker tag my-docker-app username/my-docker-app:1.0
+# Tags image with Docker Hub username for pushing
+docker images
+# Verifies image tagging
+docker push username/my-docker-app:1.0
+# Pushes image to Docker Hub registry
+docker rmi username/my-docker-app:1.0
+# Removes local image
+docker pull username/my-docker-app:1.0
+# Pulls image back from Docker Hub
+docker run -d -p 8080:80 username/my-docker-app:1.0
+# Runs container from Docker Hub image and maps port 8080
